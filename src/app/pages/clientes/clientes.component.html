@@ -1,1 +1,13 @@
 <h1>Página Clientes</h1>
+
+<ul>
+
+    <li *ngFor="let cliente of _servicioClientes.clientes">
+        <img [src]="cliente.logo" alt="" width="90">
+        {{ cliente.firstname }} {{ cliente.lastname }}
+        {{ cliente.phone }}
+        {{ cliente.email }}
+        {{ cliente.address }}
+    </li>
+
+</ul>
