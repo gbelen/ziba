@@ -1,0 +1,19 @@
+{
+  "cliente" : [ {
+    "address" : "C/ Mi Delicia #19, La Fonda Villa Mella",
+    "email" : "info@maldonado.do",
+    "firstname" : "Hermanos",
+    "lastname" : "Maldonado",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/ziba-70342.appspot.com/o/logo-enpuntonoticias.PNG?alt=media&token=e14d76b3-894d-4dcd-8214-fa9b4b26f33b",
+    "password" : "Tempor@l#1234",
+    "phone" : 8095556565
+  }, {
+    "address" : "C/ Mi Delicia #39, La Fonda Villa Mella",
+    "email" : "info@sencion.com",
+    "firstname" : "Grupo Sención",
+    "lastname" : "Sencion",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/ziba-70342.appspot.com/o/logo-enpuntonoticias.PNG?alt=media&token=e14d76b3-894d-4dcd-8214-fa9b4b26f33b",
+    "password" : "Tempor@l#1234",
+    "phone" : 80955509090
+  } ]
+}

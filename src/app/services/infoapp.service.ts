@@ -8,7 +8,7 @@ import { InfoAppInterface } from '../interfaces/info-app.interfaces';
 export class InfoappService {
 
 	info: InfoAppInterface = {};
-	loaded = false;
+	cargando = true;
 
 	clientes: any[] = [];
 
@@ -25,8 +25,9 @@ export class InfoappService {
 		//Leo el archivo json que cree previamente en assets/data
 		this.http.get('assets/data/info-app.json')
 			.subscribe( (resp: InfoAppInterface) =>{
-				this.loaded = true; 
-				this.info = resp;
+				
+			this.info = resp;	
+			this.cargando = false;
 		});
 	}
 	
@@ -39,7 +40,7 @@ export class InfoappService {
 			.subscribe( (resp: any[]) =>{
 				
 				this.clientes = resp;
-				console.log(resp);
+				//console.log(resp);
 		});
 
 	}

@@ -1,9 +1,15 @@
 <h1>Página Clientes</h1>
 
-<ul>
+<div class="cargando" *ngIf="_servicioClientes.cargando" style="text-align: center;">
+    <h4>Cargando clientes</h4>
+    <img src="../../../assets/images/loading.gif" alt="" style="width:30px;" /><br>
+    <small>Por favor espere</small>
+</div>
+
+<ul *ngIf="!_servicioClientes.cargando">
 
     <li *ngFor="let cliente of _servicioClientes.clientes">
-        <img [src]="cliente.logo" alt="" width="90">
+        <img [src]="cliente.logo" alt="" width="90"> <br>
         {{ cliente.firstname }} {{ cliente.lastname }}
         {{ cliente.phone }}
         {{ cliente.email }}
