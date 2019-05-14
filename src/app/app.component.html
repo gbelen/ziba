@@ -1,8 +1,24 @@
-<app-header></app-header>
+<div class="wrapper">
+	<div class="sidebar" data-color="black" data-image="">
+        
+        <app-sidebar></app-sidebar>
 
-<!-- <h1>{{ title }}</h1> -->
+    </div>
 
-<router-outlet></router-outlet>
-<!-- <app-about></app-about> -->
+    <div class="main-panel">
+        
+        <app-header></app-header>
 
-<app-footer></app-footer>
+        <div class="content">
+            <div class="container-fluid">
+
+                <router-outlet></router-outlet>
+
+            </div>
+        </div>
+
+
+        <app-footer></app-footer>
+
+    </div>
+</div><!--/wrapper -->
