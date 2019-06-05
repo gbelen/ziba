@@ -1,19 +1,106 @@
-<h1>Página Clientes</h1>
+<!-- <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Listado de clientes</h4>
+                    <p class="category">Here is a subtitle for this table</p>
+                </div>
+                <div class="content table-responsive table-full-width">
 
-<div class="cargando" *ngIf="_servicioClientes.cargando" style="text-align: center;">
-    <h4>Cargando clientes</h4>
-    <img src="../../../assets/images/loading.gif" alt="" style="width:30px;" /><br>
-    <small>Por favor espere</small>
-</div>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>A</th>
+                            <th>Country</th>
+                            <th>City</th>
+                        </thead>
 
-<ul *ngIf="!_servicioClientes.cargando">
+                        <div class="cargando" *ngIf="_servicioClientes.cargando" style="text-align: center;">
+                            <h4>Cargando clientes</h4>
+                            <img src="../../../assets/images/loading.gif" alt="" style="width:30px;" /><br>
+                            <small>Por favor espere</small>
+                        </div>
+                        
+                        <tbody *ngIf="!_servicioClientes.cargando">
 
-    <li *ngFor="let cliente of _servicioClientes.clientes">
-        <img [src]="cliente.logo" alt="" width="90"> <br>
-        {{ cliente.firstname }} {{ cliente.lastname }}
-        {{ cliente.phone }}
-        {{ cliente.email }}
-        {{ cliente.address }}
-    </li>
+                            <tr *ngFor="let cliente of _servicioClientes.clientes">
+                                <td><img [src]="cliente.logo" alt="" width="90"></td>
+                                <td>{{ cliente.firstname }}</td>
+                                <td>$36,738</td>
+                                <td>Niger</td>
+                                <td>Oud-Turnhout</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
 
-</ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="table">
+
+            <div class='theader'>
+                <div class='table_header'>CLIENTE</div>
+                <div class='table_header'>SERVICIOS</div>
+                <div class='table_header'>COSTO</div>
+                <div class='table_header'>PROX. RENOVACIÓN</div>
+                <div class='table_header'>CONTACTO</div>
+                <div class='table_header'></div>
+            </div>
+
+            <div class="cargando" *ngIf="_servicioClientes.cargando" style="text-align: center;">
+                <h4>Cargando clientes</h4>
+                <img src="../../../assets/images/loading.gif" alt="" style="width:30px;" /><br>
+                <small>Por favor espere</small>
+            </div>            
+
+
+            <div class='table_row' *ngFor="let cliente of _servicioClientes.clientes">
+                <div class='table_small'>
+                    <div class='table_cell'></div>
+                    <div class='table_cell clientName'>
+                        <img class="float-left imgCliente rounded-circle" src="http://placehold.it/40x40" /> 
+                        {{ $client }}</div>
+                </div>
+                <div class='table_small'>
+                    <div class='table_cell'>CLIENTE</div>
+                    <div class='table_cell'>{{ $client }}</div>
+                </div>
+                <div class='table_small'>
+                    <div class='table_cell'>SERVICIOS</div>
+                    <div class='table_cell'>{{ $client }}</div>
+                </div>
+                <div class='table_small'>
+                    <div class='table_cell'>COSTO</div>
+                    <div class='table_cell'>{{ $client }}</div>
+                </div>
+                <div class='table_small'>
+                    <div class='table_cell'>PROX. RENOVACIÓN</div>
+                    <div class='table_cell'>{{ $client }} </div>
+                </div>
+
+
+                <div class='table_small'>
+                    <div class='table_cell'>
+                        <a class="dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </a>
+                    </div>
+                    <div class='table_cell'>
+                        <a class="dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </a>
+                        </div>
+                </div>
+
+            </div>
+
+        </div><!--/table -->    
